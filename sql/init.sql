@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS `device_center`;
 
+USE device_center;
+
 CREATE TABLE IF NOT EXISTS `dc_device`(
     id int(64) primary key,
     name varchar(64) not null comment '设备名称',
