@@ -5,6 +5,10 @@
 - springboot3
 - mybatis-plus
 - redisson
+
+## 项目结构
+
+
 ## 依赖环境
 - jdk17
 - influxdb2.6.1

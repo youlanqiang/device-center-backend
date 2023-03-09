@@ -1,38 +1,53 @@
 package top.youlanqiang.devicecenter.domain;
 
+import java.time.LocalDateTime;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 /**
- * 产品类
+ * 建筑
  * 
  * @author youlanqiang
- *         created in 2022/11/25 00:30
  */
 @Data
-public class DcProduct {
+public class DcBuilding {
 
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
-     * 产品名称
+     * 建筑名称
      */
     private String name;
 
     /**
-     * 品牌
+     * 关联园区id
      */
-    private String brand;
+    private Long fkZoneId;
 
     /**
-     * 使用年限,0表示不会过期
+     * 省份编码
      */
-    private Short serviceLife;
+    private Integer provinceCode;
+
+    /**
+     * 城市编码
+     */
+    private Integer cityCode;
+
+    /**
+     * 区域编码
+     */
+    private Integer areaCode;
+
+    /**
+     * 街道信息
+     */
+    private String streetInfo;
 
     /**
      * 简介
@@ -42,4 +57,6 @@ public class DcProduct {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updateTime;
 }
