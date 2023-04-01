@@ -1,4 +1,4 @@
-package top.youlanqiang.devicecenter.domain;
+package top.youlanqiang.devicecenter.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,38 +8,40 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * 产品类
+ * 产品属性实体类
  * 
  * @author youlanqiang
- *         created in 2022/11/25 00:30
+ *         created in 2022/11/25 00:31
  */
 @Data
-public class DcProduct {
+public class DcAttribute {
 
-    @TableId(type = IdType.ASSIGN_ID)
+    @TableId(type = IdType.ASSIGN_UUID)
     private Long id;
 
     /**
-     * 产品名称
+     * 属性名称
      */
     private String name;
 
     /**
-     * 品牌
+     * 属性中文别名
      */
-    private String brand;
+    private String mark;
 
     /**
-     * 使用年限,0表示不会过期
+     * 类型 0-数值类型
      */
-    private Short serviceLife;
+    private Integer type;
 
     /**
-     * 简介
+     * 单位
      */
-    private String info;
+    private String unit;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updateTime;
 }

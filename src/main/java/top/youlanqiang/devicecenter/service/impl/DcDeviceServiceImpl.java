@@ -2,7 +2,8 @@ package top.youlanqiang.devicecenter.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
-import top.youlanqiang.devicecenter.domain.DcDevice;
+
+import top.youlanqiang.devicecenter.domain.entity.DcDevice;
 import top.youlanqiang.devicecenter.mapper.DcDeviceMapper;
 import top.youlanqiang.devicecenter.service.IDcDeviceService;
 

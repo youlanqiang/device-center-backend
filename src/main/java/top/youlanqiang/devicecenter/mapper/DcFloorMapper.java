@@ -4,7 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
-import top.youlanqiang.devicecenter.domain.DcFloor;
+import top.youlanqiang.devicecenter.domain.entity.DcFloor;
 
 /**
  * @author youlanqiang

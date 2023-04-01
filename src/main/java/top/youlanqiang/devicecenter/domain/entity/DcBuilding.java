@@ -1,54 +1,53 @@
-package top.youlanqiang.devicecenter.domain;
+package top.youlanqiang.devicecenter.domain.entity;
+
+import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 /**
- * 设备类
+ * 建筑
  * 
  * @author youlanqiang
- *         created in 2022/11/23 21:44
  */
 @Data
-public class DcDevice {
+public class DcBuilding {
 
-    @TableId(type = IdType.ASSIGN_UUID)
+    @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
-     * 设备名称
+     * 建筑名称
      */
     private String name;
 
     /**
-     * 设备产品id
-     */
-    private Long fkProductId;
-
-    /**
-     * 所属建筑
-     */
-    private Long fkBuildingId;
-
-    /**
-     * 所属楼层
-     */
-    private Long fkFloorId;
-
-    /**
-     * 所属区域
+     * 关联园区id
      */
     private Long fkZoneId;
 
     /**
-     * 安装时间
+     * 省份编码
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime installationTime;
+    private Integer provinceCode;
+
+    /**
+     * 城市编码
+     */
+    private Integer cityCode;
+
+    /**
+     * 区域编码
+     */
+    private Integer areaCode;
+
+    /**
+     * 街道信息
+     */
+    private String streetInfo;
 
     /**
      * 简介

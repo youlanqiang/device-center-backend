@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
-import top.youlanqiang.devicecenter.domain.DcBuilding;
+import top.youlanqiang.devicecenter.domain.entity.DcBuilding;
 import top.youlanqiang.devicecenter.mapper.DcBuildingMapper;
 import top.youlanqiang.devicecenter.service.IDcBuildingService;
 

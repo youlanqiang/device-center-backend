@@ -1,4 +1,4 @@
-package top.youlanqiang.devicecenter.domain;
+package top.youlanqiang.devicecenter.domain.entity;
 
 import java.time.LocalDateTime;
 

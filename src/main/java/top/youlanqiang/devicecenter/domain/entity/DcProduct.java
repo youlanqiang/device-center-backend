@@ -1,48 +1,38 @@
-package top.youlanqiang.devicecenter.domain;
-
-import java.time.LocalDateTime;
+package top.youlanqiang.devicecenter.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
- * 区域类
+ * 产品类
  * 
  * @author youlanqiang
+ *         created in 2022/11/25 00:30
  */
 @Data
-public class DcZone {
+public class DcProduct {
 
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
-     * 区域名称
+     * 产品名称
      */
     private String name;
 
     /**
-     * 省份编码
+     * 品牌
      */
-    private Integer provinceCode;
+    private String brand;
 
     /**
-     * 城市编码
+     * 使用年限,0表示不会过期
      */
-    private Integer cityCode;
-
-    /**
-     * 区域编码
-     */
-    private Integer areaCode;
-
-    /**
-     * 街道信息
-     */
-    private String streetInfo;
+    private Short serviceLife;
 
     /**
      * 简介
@@ -51,8 +41,5 @@ public class DcZone {
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
-
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime updateTime;
 
 }
