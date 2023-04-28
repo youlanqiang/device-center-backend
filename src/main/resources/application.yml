@@ -4,7 +4,7 @@ spring:
   application:
     name: device-center
   datasource:
-    url: jdbc:mysql://192.168.1.4:3306/device_center
+    url: jdbc:mysql://192.168.31.166:3306/device_center
     username: root
     password: root
   redis:
@@ -13,3 +13,6 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+logging:
+  level:
+    '[top.youlanqiang.devicecenter]': debug

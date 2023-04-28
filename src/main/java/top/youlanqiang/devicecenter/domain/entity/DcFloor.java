@@ -2,6 +2,7 @@ package top.youlanqiang.devicecenter.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 
 import lombok.Data;
 
@@ -11,6 +12,7 @@ import lombok.Data;
  * @author youlanqiang
  */
 @Data
+@TableName("dc_floor")
 public class DcFloor {
 
     @TableId(type = IdType.ASSIGN_ID)

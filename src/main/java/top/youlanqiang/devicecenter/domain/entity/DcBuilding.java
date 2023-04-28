@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
@@ -14,6 +15,7 @@ import lombok.Data;
  * @author youlanqiang
  */
 @Data
+@TableName("dc_building")
 public class DcBuilding {
 
     @TableId(type = IdType.ASSIGN_ID)

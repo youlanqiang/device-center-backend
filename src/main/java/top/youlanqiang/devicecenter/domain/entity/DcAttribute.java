@@ -2,6 +2,7 @@ package top.youlanqiang.devicecenter.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
  *         created in 2022/11/25 00:31
  */
 @Data
+@TableName("dc_attribute")
 public class DcAttribute {
 
     @TableId(type = IdType.ASSIGN_UUID)
